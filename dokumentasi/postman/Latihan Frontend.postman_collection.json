@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "a839ee04-4b77-4953-8b15-75d4f4629003",
+		"name": "Latihan Frontend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49156647",
+		"_collection_link": "https://dwiariyanti613-3082681.postman.co/workspace/Dwi's-Workspace~b1137c89-5510-4edd-8f13-24f3f7bdcfb4/collection/49156647-a839ee04-4b77-4953-8b15-75d4f4629003?action=share&source=collection_link&creator=49156647"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Chan\",\r\n  \"email\": \"Chan123@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Chan123@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tampilkan Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc2MjM0Mzk2MDM4OSwiZW1haWwiOiJDaGFuMTIzQGdtYWlsLmNvbSIsImlhdCI6MTc2MjM0NDk4MiwiZXhwIjoxNzYyMzQ4NTgyfQ.hNwt_dkcwSwsgssjTESJFokoq_EsWhR6-qEwUvKhOtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tambah Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc2MjM0Mzk2MDM4OSwiZW1haWwiOiJDaGFuMTIzQGdtYWlsLmNvbSIsImlhdCI6MTc2MjM0NDk4MiwiZXhwIjoxNzYyMzQ4NTgyfQ.hNwt_dkcwSwsgssjTESJFokoq_EsWhR6-qEwUvKhOtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"judul\": \"Hujan\",\r\n  \"deskripsi\": \"Tokoh Esok Bahtera anak pemilik toko roti yang sangat digemari.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc2MjM0Mzk2MDM4OSwiZW1haWwiOiJDaGFuMTIzQGdtYWlsLmNvbSIsImlhdCI6MTc2MjM0NDk4MiwiZXhwIjoxNzYyMzQ4NTgyfQ.hNwt_dkcwSwsgssjTESJFokoq_EsWhR6-qEwUvKhOtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/items/1762345070950",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items",
+						"1762345070950"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hapus Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc2MjM0Mzk2MDM4OSwiZW1haWwiOiJDaGFuMTIzQGdtYWlsLmNvbSIsImlhdCI6MTc2MjM0NDk4MiwiZXhwIjoxNzYyMzQ4NTgyfQ.hNwt_dkcwSwsgssjTESJFokoq_EsWhR6-qEwUvKhOtk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/items/1762345070950",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"items",
+						"1762345070950"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
